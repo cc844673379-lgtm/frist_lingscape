@@ -1,0 +1,107 @@
+﻿name: Advanced PR Review Monitor
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  pull_request_review:
+    types: [submitted, edited]
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [opened, reopened]
+  workflow_dispatch:
+
+jobs:
+  monitor-prs:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+    
+    outputs:
+      has-new-comments: ${{ steps.check.outputs.has-new-comments }}
+      pr-list: ${{ steps.check.outputs.pr-list }}
+    
+    steps:
+      - name: Check PRs for new comments
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              sort: 'updated',
+              direction: 'desc'
+            });
+            
+            const prsWithActivity = [];
+            const thirtyMinutesAgo = Date.now() - 30 * 60 * 1000;
+            
+            for (const pr of pullRequests) {
+              const { data: reviews } = await github.rest.pulls.listReviews({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number
+              });
+              
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number
+              });
+              
+              const recentReviews = reviews.filter(r => new Date(r.submitted_at).getTime() > thirtyMinutesAgo);
+              const recentComments = comments.filter(c => new Date(c.created_at).getTime() > thirtyMinutesAgo);
+              
+              if (recentReviews.length > 0 || recentComments.length > 0) {
+                const summary = {
+                  number: pr.number,
+                  title: pr.title,
+                  url: pr.html_url,
+                  reviews: recentReviews.map(r => ({
+                    user: r.user.login,
+                    state: r.state,
+                    body: r.body
+                  })),
+                  comments: recentComments.map(c => ({
+                    user: c.user.login,
+                    body: c.body
+                  }))
+                };
+                prsWithActivity.push(summary);
+              }
+            }
+            
+            core.setOutput('has-new-comments', prsWithActivity.length > 0);
+            core.setOutput('pr-list', JSON.stringify(prsWithActivity));
+            
+            console.log('Found', prsWithActivity.length, 'PRs with recent activity');
+            console.log('PRs:', JSON.stringify(prsWithActivity, null, 2));
+      
+      - name: Create Summary Report
+        if: steps.check.outputs.has-new-comments == 'true'
+        run: |
+          echo "# PR Review Activity Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Found new review comments!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.check.outputs.pr-list }}" >> $GITHUB_STEP_SUMMARY
+
+  send-notification:
+    needs: monitor-prs
+    if: needs.monitor-prs.outputs.has-new-comments == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Display Notification
+        run: |
+          echo "======================================"
+          echo "NEW PR REVIEW COMMENTS DETECTED!"
+          echo "======================================"
+          echo "Please check your PRs for new comments."
+          echo ""
+          echo "PR List: ${{ needs.monitor-prs.outputs.pr-list }}"

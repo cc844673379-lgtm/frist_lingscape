@@ -1,0 +1,48 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E63946"/>
+      <stop offset="100%" stop-color="#F4A261"/>
+    </linearGradient>
+    <linearGradient id="inkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D3557"/>
+      <stop offset="100%" stop-color="#457B9D"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g opacity="0.1">
+    <path d="M32 128H224M128 32V224" stroke="currentColor" stroke-width="1"/>
+    <path d="M64 64L192 192M192 64L64 192" stroke="currentColor" stroke-width="1"/>
+  </g>
+  
+  <g stroke="url(#accentGradient)" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M64 192L96 160L128 192L160 160L192 192" stroke-width="2" opacity="0.8"/>
+    <path d="M64 208L96 176L128 208L160 176L192 208" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g stroke="url(#inkGradient)" stroke-width="2.5" fill="none" stroke-linejoin="round">
+    <path d="M128 32L210.44 80L210.44 176L128 224L45.56 176L45.56 80Z"/>
+  </g>
+  
+  <g fill="url(#inkGradient)">
+    <path d="M96 128Q80 96 112 64Q128 48 136 64Q120 88 104 128Z"/>
+    <path d="M160 128Q176 96 144 64Q128 48 120 64Q136 88 152 128Z"/>
+  </g>
+  
+  <g fill="url(#accentGradient)">
+    <circle cx="128" cy="128" r="6" filter="url(#glow)"/>
+  </g>
+  
+  <g fill="url(#accentGradient)" opacity="0.6">
+    <circle cx="72" cy="144" r="3"/>
+    <circle cx="184" cy="144" r="3"/>
+    <circle cx="128" cy="56" r="3"/>
+  </g>
+</svg>

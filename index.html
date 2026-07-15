@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>羚境 Lingscape - 让 AI 进入真实产业情境</title>
+  <meta name="description" content="羚境 Lingscape — 湖北奥羚技术有限公司旗下品牌，专注 AI 产业情境智能。以 AI、数据工程与行业知识，连接模型、系统、流程与业务现场，服务文旅、金融风控、数字乡村、企业数字化转型等领域。" />
+  <meta property="og:title" content="羚境 Lingscape - 让 AI 进入真实产业情境" />
+  <meta property="og:description" content="以 AI、数据工程与行业知识，连接模型、系统、流程与业务现场，把 AI 从概念能力转化为可落地、可治理、可持续演进的产业智能能力。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="keywords" content="AI 解决方案,产业智能,企业知识库,模型治理,数字化转型,文旅,风控,数字乡村" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script type="module" src="/src/scripts/main.ts" defer></script>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">羚<span>境</span></a>
+      <nav class="nav-links" role="navigation" aria-label="主导航">
+        <a href="#solutions">行业场景</a>
+        <a href="#capabilities">能力体系</a>
+        <a href="#products">产品矩阵</a>
+        <a href="#cases">案例成果</a>
+        <a href="#delivery">交付治理</a>
+        <a href="#about">关于羚境</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">联系咨询</a>
+      <button class="nav-toggle" id="navToggle" aria-label="切换导航菜单" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="#solutions">行业场景</a>
+  <a href="#capabilities">能力体系</a>
+  <a href="#products">产品矩阵</a>
+  <a href="#cases">案例成果</a>
+  <a href="#delivery">交付治理</a>
+  <a href="#about">关于羚境</a>
+  <a href="#contact">联系咨询</a>
+</div>
+
+<!-- ===== 1. Hero ===== -->
+<section id="hero" class="hero" style="position:relative; min-height:85dvh; display:flex; align-items:center; overflow:hidden;">
+  <canvas id="hero-canvas" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
+  <div style="position:relative; z-index:1; width:100%;">
+    <div class="container" style="padding-top:48px;">
+      <div class="grid" style="align-items:end;">
+        <div class="col-span-4 md:col-span-8 lg:col-span-8">
+          <p class="eyebrow" style="margin-bottom:24px;">AI &middot; 产业情境智能</p>
+          <h1 style="font-size:clamp(44px,5.5vw,88px); line-height:1.06; letter-spacing:-0.025em; color:var(--ink); font-weight:600;">
+            <span class="text-serif" style="font-weight:600;">羚境</span>，让 AI<br />进入真实产业情境
+          </h1>
+          <p style="font-size:clamp(17px,1.35vw,20px); color:var(--ink-soft); margin-top:28px; max-width:540px; line-height:1.8;">
+            以 AI、数据工程与行业知识，连接模型、系统、流程与业务现场，把 AI 从概念能力转化为可落地、可治理、可持续演进的产业智能能力。
+          </p>
+          <div style="display:flex; gap:16px; margin-top:36px; flex-wrap:wrap;">
+            <a href="#capabilities" class="btn btn-primary" style="height:52px; padding:0 32px; font-size:16px;">查看能力体系</a>
+            <a href="#solutions" class="btn btn-secondary" style="height:52px; padding:0 32px; font-size:16px;">进入解决方案</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-modules" style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:56px;" data-reveal>
+        <div class="hero-module"><div class="hero-module-title">模型网关</div><div class="hero-module-desc">多模型接入、路由、成本、审计</div></div>
+        <div class="hero-module"><div class="hero-module-title">企业知识库</div><div class="hero-module-desc">制度、规范、案例、会议结论可检索可引用</div></div>
+        <div class="hero-module"><div class="hero-module-title">流程连接</div><div class="hero-module-desc">工具插件、业务系统、审批/办公流程</div></div>
+        <div class="hero-module"><div class="hero-module-title">行业助手</div><div class="hero-module-desc">文旅、风控、乡村、企业办公等应用入口</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. Brand Philosophy ===== -->
+<section id="philosophy" class="section" data-reveal>
+  <div class="container">
+    <div class="scanline" id="scanline"></div>
+    <div class="grid" style="margin-top:32px;">
+      <div class="col-span-4 md:col-span-3 lg:col-span-3">
+        <span class="text-label" style="color:var(--muted);">AI & CONTEXT</span>
+      </div>
+      <div class="col-span-4 md:col-span-5 lg:col-span-6">
+        <p style="font-size:clamp(18px,1.6vw,26px); color:var(--ink); line-height:1.6; max-width:680px;">
+          互联网连接信息，AI 连接知识、工具、流程和行动。<br />
+          <span class="text-serif">真正的智能化，不是多一个模型，而是让 AI 进入具体业务现场。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. Core Perspectives ===== -->
+<section id="perspectives" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>AI 进入真实产业情境的三步</h2>
+    </div>
+    <div class="grid">
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 card" data-reveal>
+        <div class="card-label">Step 01</div>
+        <div class="card-title">先理解现场</div>
+        <div class="card-desc">行业规则、组织知识、数据系统和现实约束不同，AI 不能只输出通用回答。</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 card" data-reveal>
+        <div class="card-label">Step 02</div>
+        <div class="card-title">再连接能力</div>
+        <div class="card-desc">模型、知识库、业务系统、工具插件和流程节点需要组织成可执行路径。</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 card" data-reveal>
+        <div class="card-label">Step 03</div>
+        <div class="card-title">最终可控演进</div>
+        <div class="card-desc">BG 端 AI 建设必须具备权限、成本、审计、模型治理和持续运营能力。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. Capability System ===== -->
+<section id="capabilities" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>三层能力架构</h2>
+    </div>
+    <div class="grid" style="gap:16px;">
+      <div class="col-span-4 md:col-span-8 lg:col-span-12 cap-path" data-layer="0">
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; padding-left:24px;">
+          <div class="card" style="grid-column:1;">
+            <div class="card-label" style="color:var(--accent);">应用层</div>
+            <div class="card-title">行业助手</div>
+            <div class="card-desc">管理驾驶舱、办公 Agent、场景应用</div>
+          </div>
+          <div class="card" style="grid-column:2;">
+            <div class="card-label" style="color:var(--accent);">应用层</div>
+            <div class="card-title">管理驾驶舱</div>
+            <div class="card-desc">数据洞察、决策支持、运营看板</div>
+          </div>
+          <div class="card" style="grid-column:3;">
+            <div class="card-label" style="color:var(--accent);">应用层</div>
+            <div class="card-title">办公 Agent</div>
+            <div class="card-desc">智能助理、自动化流程、协同工具</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-8 lg:col-span-12 cap-path" data-layer="1">
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; padding-left:24px;">
+          <div class="card">
+            <div class="card-label" style="color:var(--accent-warm);">情境层</div>
+            <div class="card-title">企业知识库</div>
+            <div class="card-desc">知识资产平台，可检索可引用</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent-warm);">情境层</div>
+            <div class="card-title">Agent 编排</div>
+            <div class="card-desc">多 Agent 协作任务编排</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent-warm);">情境层</div>
+            <div class="card-title">流程连接</div>
+            <div class="card-desc">业务系统、工具插件集成</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent-warm);">情境层</div>
+            <div class="card-title">工具插件</div>
+            <div class="card-desc">可扩展工具链和插件系统</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-8 lg:col-span-12 cap-path" data-layer="2">
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:16px; padding-left:24px;">
+          <div class="card">
+            <div class="card-label" style="color:var(--accent);">底座层</div>
+            <div class="card-title">模型网关</div>
+            <div class="card-desc">统一接入、路由、成本审计</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent);">底座层</div>
+            <div class="card-title">权限治理</div>
+            <div class="card-desc">基于角色的访问控制</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent);">底座层</div>
+            <div class="card-title">成本控制</div>
+            <div class="card-desc">预算管理、调用统计</div>
+          </div>
+          <div class="card">
+            <div class="card-label" style="color:var(--accent);">底座层</div>
+            <div class="card-title">调用审计</div>
+            <div class="card-desc">全链路追溯、合规记录</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. Industry Solutions ===== -->
+<section id="solutions" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>五类行业解决方案</h2>
+      <p>每个行业都有独特的业务现场。羚境针对不同场景，提供可落地的 AI 智能能力。</p>
+    </div>
+    <div class="grid" style="gap:20px;">
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 industry-card" data-reveal>
+        <div class="industry-card-top">
+          <div class="industry-card-marker"></div>
+          <div class="card-label" style="color:var(--accent-warm);">文旅</div>
+          <div class="industry-card-name">文旅行业解决方案</div>
+          <div class="industry-card-context">文旅涉及多业态、多触点、多数据源，AI 需打通票务、导览、运营和营销全链路。</div>
+          <div class="industry-card-approach">→ 羚境进入：构建文旅智能体，打通游客触点与运营后台</div>
+        </div>
+        <div class="industry-card-bottom">
+          <div class="industry-card-point">智慧导览与个性化推荐</div>
+          <div class="industry-card-point">多语种智能客服与内容生成</div>
+          <div class="industry-card-point">运营数据洞察与决策</div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 industry-card" data-reveal>
+        <div class="industry-card-top">
+          <div class="industry-card-marker"></div>
+          <div class="card-label" style="color:var(--accent-warm);">金融风控</div>
+          <div class="industry-card-name">金融风控解决方案</div>
+          <div class="industry-card-context">风控要求实时、准确、可解释，AI 须在合规框架内实现智能决策辅助。</div>
+          <div class="industry-card-approach">→ 羚境进入：接入风控知识库与规则引擎，构建可审计 AI 决策链路</div>
+        </div>
+        <div class="industry-card-bottom">
+          <div class="industry-card-point">智能反欺诈与异常检测</div>
+          <div class="industry-card-point">合规文档智能审查</div>
+          <div class="industry-card-point">风险知识库与决策推理</div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 industry-card" data-reveal>
+        <div class="industry-card-top">
+          <div class="industry-card-marker"></div>
+          <div class="card-label" style="color:var(--accent-warm);">数字乡村</div>
+          <div class="industry-card-name">数字乡村解决方案</div>
+          <div class="industry-card-context">乡村数字化需兼顾基础设施、人才储备和场景适配，AI 需轻量可落地。</div>
+          <div class="industry-card-approach">→ 羚境进入：部署轻量知识库与智能助手，连接基层业务场景</div>
+        </div>
+        <div class="industry-card-bottom">
+          <div class="industry-card-point">农业生产智能决策支持</div>
+          <div class="industry-card-point">乡村治理与便民服务 AI 助手</div>
+          <div class="industry-card-point">农产品电商智能运营</div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 industry-card" data-reveal>
+        <div class="industry-card-top">
+          <div class="industry-card-marker"></div>
+          <div class="card-label" style="color:var(--accent-warm);">企业数字化</div>
+          <div class="industry-card-name">企业数字化转型</div>
+          <div class="industry-card-context">企业需要打通数据孤岛、连接流程断点，AI 需与现有 IT 系统和业务深度融合。</div>
+          <div class="industry-card-approach">→ 羚境进入：基于 RelayAI 底座与企业知识库，构建行业应用层</div>
+        </div>
+        <div class="industry-card-bottom">
+          <div class="industry-card-point">企业知识资产管理</div>
+          <div class="industry-card-point">智能流程自动化</div>
+          <div class="industry-card-point">管理驾驶舱与决策支持</div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 industry-card" data-reveal>
+        <div class="industry-card-top">
+          <div class="industry-card-marker"></div>
+          <div class="card-label" style="color:var(--accent-warm);">AI 原生能力</div>
+          <div class="industry-card-name">AI 原生能力建设</div>
+          <div class="industry-card-context">AI 原生建设需要从模型选型到治理运营的完整链路，羚境提供从底座到应用的全栈能力。</div>
+          <div class="industry-card-approach">→ 羚境进入：以 RelayAI 网关为底座，建立多层治理与能力体系</div>
+        </div>
+        <div class="industry-card-bottom">
+          <div class="industry-card-point">多模型接入与统一网关</div>
+          <div class="industry-card-point">AI 安全、治理与审计体系</div>
+          <div class="industry-card-point">模型效果评估与持续优化</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. Product Matrix ===== -->
+<section id="products" class="section section-light" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider" style="background:var(--accent); margin-bottom:32px;"></div>
+      <h2 style="color:#111714;">三大产品支撑情境智能</h2>
+      <p style="color:#405049;">从底座治理到应用入口，形成完整的 AI 产业智能产品体系。</p>
+    </div>
+    <div class="grid" style="gap:20px;">
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 product-card" data-reveal>
+        <div class="product-card-role">底座治理</div>
+        <div class="product-card-name">RelayAI</div>
+        <div class="product-card-desc">企业级 AI API 汇聚与治理平台。统一管理模型接入、路由、权限、成本统计和调用审计。</div>
+        <div class="product-card-point">统一多模型接入网关</div>
+        <div class="product-card-point">权限与成本精细管控</div>
+        <div class="product-card-point">全链路调用审计</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 product-card" data-reveal>
+        <div class="product-card-role">工作入口</div>
+        <div class="product-card-name">ShadowMind</div>
+        <div class="product-card-desc">本地优先、对话优先的桌面 AI 工作助手。具备长期记忆、工作区上下文和多模型接入能力。</div>
+        <div class="product-card-point">长期记忆与上下文理解</div>
+        <div class="product-card-point">多模型灵活切换</div>
+        <div class="product-card-point">本地数据安全保障</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 product-card" data-reveal>
+        <div class="product-card-role">知识资产</div>
+        <div class="product-card-name">企业知识库</div>
+        <div class="product-card-desc">将制度、规范、案例、项目经验和会议结论组织成可检索、可引用、可被 AI 调用的知识资产。</div>
+        <div class="product-card-point">多格式知识导入与管理</div>
+        <div class="product-card-point">智能检索与 AI 引用</div>
+        <div class="product-card-point">权限分级与知识治理</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. Delivery Method ===== -->
+<section id="delivery" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>六步交付方法</h2>
+      <p>从业务理解到持续优化，确保 AI 能力在真实业务场景中落地见效。</p>
+    </div>
+    <div class="step-flow">
+      <div class="step-item" data-reveal>
+        <div class="step-number">01</div>
+        <div class="step-title">业务调研</div>
+        <div class="step-desc">深入业务现场，理解流程、痛点和数据现状</div>
+      </div>
+      <div class="step-item" data-reveal>
+        <div class="step-number">02</div>
+        <div class="step-title">场景建模</div>
+        <div class="step-desc">将业务需求转化为 AI 可执行的场景模型</div>
+      </div>
+      <div class="step-item" data-reveal>
+        <div class="step-number">03</div>
+        <div class="step-title">系统接入</div>
+        <div class="step-desc">连接现有系统、知识库和工具生态</div>
+      </div>
+      <div class="step-item" data-reveal>
+        <div class="step-number">04</div>
+        <div class="step-title">应用落地</div>
+        <div class="step-desc">部署 AI 应用到实际业务流程中</div>
+      </div>
+      <div class="step-item" data-reveal>
+        <div class="step-number">05</div>
+        <div class="step-title">治理运营</div>
+        <div class="step-desc">建立权限、成本、审计和持续监控机制</div>
+      </div>
+      <div class="step-item" data-reveal>
+        <div class="step-number">06</div>
+        <div class="step-title">持续演进</div>
+        <div class="step-desc">基于反馈和数据持续优化模型与流程</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. Security & Governance ===== -->
+<section id="governance" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>企业级安全与治理体系</h2>
+      <p>为 BG 端客户提供可审计、可控制、可优化的 AI 治理框架。</p>
+    </div>
+    <div class="grid" style="gap:20px;">
+      <div class="col-span-4 md:col-span-4 lg:col-span-7" data-reveal>
+        <div class="gov-dashboard">
+          <div class="gov-dashboard-header">
+            <span class="gov-dashboard-title">AI Governance Console</span>
+            <span class="gov-dashboard-status"><span class="gov-dot-active"></span> 系统运行中</span>
+          </div>
+          <div class="gov-dashboard-body">
+            <div class="gov-metric-row">
+              <div class="gov-metric">
+                <div class="gov-metric-value" style="color:var(--accent);">6</div>
+                <div class="gov-metric-label">治理域</div>
+              </div>
+              <div class="gov-metric">
+                <div class="gov-metric-value">99.7%</div>
+                <div class="gov-metric-label">审计覆盖率</div>
+              </div>
+              <div class="gov-metric">
+                <div class="gov-metric-value">4级</div>
+                <div class="gov-metric-label">权限分层</div>
+              </div>
+            </div>
+            <div class="gov-log-item">
+              <span class="gov-log-time">14:32</span>
+              <span class="gov-log-action">模型调用审计 · gpt-4 · token-usage</span>
+              <span class="gov-log-status">PASS</span>
+            </div>
+            <div class="gov-log-item">
+              <span class="gov-log-time">14:31</span>
+              <span class="gov-log-action">权限校验 · role-engineer · model-access</span>
+              <span class="gov-log-status">PASS</span>
+            </div>
+            <div class="gov-log-item">
+              <span class="gov-log-time">14:30</span>
+              <span class="gov-log-action">成本统计 · dept-rd · budget-check</span>
+              <span class="gov-log-status">OK</span>
+            </div>
+            <div class="gov-log-item">
+              <span class="gov-log-time">14:29</span>
+              <span class="gov-log-action">知识库引用 · doc-policy-v3 · audit</span>
+              <span class="gov-log-status">CITED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-5" data-reveal>
+        <div class="gov-panel" style="height:100%; display:flex; flex-direction:column;">
+          <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;">治理六项</div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">模型调用审计</div>
+              <div class="gov-desc">所有模型调用可追溯，记录调用方、时间、模型、token 消耗</div>
+            </div>
+          </div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">权限与角色控制</div>
+              <div class="gov-desc">基于角色的访问控制，不同角色可调用不同模型和知识范围</div>
+            </div>
+          </div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">成本统计与预算控制</div>
+              <div class="gov-desc">按部门/项目/角色统计成本，支持预算阈值告警</div>
+            </div>
+          </div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">数据边界与企业知识治理</div>
+              <div class="gov-desc">知识库分级分类，敏感数据边界控制</div>
+            </div>
+          </div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">多模型接入与路由策略</div>
+              <div class="gov-desc">统一网关接入多模型，按场景/成本/能力路由</div>
+            </div>
+          </div>
+          <div class="gov-item">
+            <span class="gov-dot"></span>
+            <div>
+              <div class="gov-title">可观测可追溯可持续优化</div>
+              <div class="gov-desc">调用链可观测，效果可度量，持续优化</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. Trust Endorsement ===== -->
+<section id="cases" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>典型交付能力</h2>
+      <p>我们持续积累行业交付经验，以下为典型成果与核心能力清单。</p>
+    </div>
+    <div class="grid" style="gap:20px;">
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 trust-card" data-reveal>
+        <div class="trust-card-icon">◇</div>
+        <div class="trust-card-title">行业知识库构建</div>
+        <div class="trust-card-desc">为多家企业搭建领域知识库，覆盖制度、规范、案例和项目经验</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 trust-card" data-reveal>
+        <div class="trust-card-icon">↗</div>
+        <div class="trust-card-title">AI 助手部署</div>
+        <div class="trust-card-desc">在文旅、办公等领域部署 AI 助手，提升服务效率和用户体验</div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-4 trust-card" data-reveal>
+        <div class="trust-card-icon">⊞</div>
+        <div class="trust-card-title">模型网关接入</div>
+        <div class="trust-card-desc">为多个 BG 端客户搭建统一模型网关，实现多模型路由与成本管控</div>
+      </div>
+    </div>
+    <div class="grid" style="gap:16px; margin-top:16px;">
+      <div class="col-span-4 md:col-span-4 lg:col-span-6" data-reveal>
+        <div class="card" style="padding:28px;">
+          <div class="card-label" style="color:var(--accent);">方法论</div>
+          <div class="card-title" style="font-size:16px;">六步交付方法论在实践中验证</div>
+          <div class="card-desc">业务调研到持续演进的六步方法已在多个项目中证明其有效性，确保 AI 能力在真实业务场景中落地见效。</div>
+        </div>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-6" data-reveal>
+        <div class="card" style="padding:28px;">
+          <div class="card-label" style="color:var(--accent);">技术可信</div>
+          <div class="card-title" style="font-size:16px;">完整技术栈自主可控</div>
+          <div class="card-desc">从 RelayAI 模型网关到 ShadowMind 工作助手，再到企业知识库，三大产品构成完整的 AI 产业智能技术栈。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. About Company ===== -->
+<section id="about" class="section" data-reveal>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>湖北奥羚技术有限公司</h2>
+      <p>以「羚境」为品牌，致力于让 AI 进入真实产业情境。</p>
+    </div>
+    <div class="grid" style="gap:32px;">
+      <div class="col-span-4 md:col-span-8 lg:col-span-7" data-reveal>
+        <p style="color:var(--ink-soft); font-size:17px; line-height:1.9; max-width:var(--prose-max-width);">
+          湖北奥羚技术有限公司以「羚境 Lingscape」作为对外主品牌，深耕 AI、数据工程、行业解决方案和企业数字化转型领域。公司面向文旅、金融风控、数字乡村、企业数字化转型和 AI 原生能力建设等领域，提供从底座治理到应用入口的完整 AI 产业智能产品体系。
+        </p>
+        <p style="color:var(--ink-soft); font-size:17px; line-height:1.9; max-width:var(--prose-max-width); margin-top:20px;">
+          核心产品包括企业级 AI API 汇聚与治理平台 RelayAI、本地优先的桌面 AI 工作助手 ShadowMind，以及企业知识库平台。公司坚持"让 AI 进入真实产业情境"的品牌主张，帮助 BG 端客户实现 AI 的真正落地。
+        </p>
+      </div>
+      <div class="col-span-4 md:col-span-4 lg:col-span-5" data-reveal>
+        <div class="card" style="padding:32px;">
+          <div class="card-label" style="color:var(--accent);">业务方向</div>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">AI 解决方案</span>
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">数据工程</span>
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">行业解决方案</span>
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">企业数字化转型</span>
+          </div>
+          <div class="card-label" style="color:var(--accent); margin-top:24px;">产品体系</div>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">RelayAI</span>
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">ShadowMind</span>
+            <span style="background:var(--bg-panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:14px; color:var(--ink);">企业知识库</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. Contact ===== -->
+<section id="contact" class="section" data-reveal>
+  <div class="container">
+    <div style="background:var(--bg-soft); border:1px solid var(--line); border-radius:12px; padding:64px 48px; text-align:center;" data-reveal>
+      <h2 style="font-size:clamp(28px,3vw,42px);">让 AI 进入你的真实业务现场</h2>
+      <p style="color:var(--ink-soft); margin-top:16px; max-width:480px; margin-left:auto; margin-right:auto; font-size:17px; line-height:1.7;">
+        可围绕业务场景、现有系统、知识资产和 AI 应用目标进行初步沟通
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contact@lingscape.ai" class="btn btn-primary">发送邮件咨询</a>
+        <button class="btn btn-secondary" id="copyEmailBtn" type="button">复制邮箱地址</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. Footer ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; padding-bottom:48px; border-bottom:1px solid var(--line);">
+      <div>
+        <div class="footer-brand"><span class="text-serif">羚境</span> Lingscape</div>
+        <div class="footer-text" style="max-width:280px;">让 AI 进入真实产业情境。湖北奥羚技术有限公司旗下品牌。</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div>
+          <div style="font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; font-family:var(--font-mono); margin-bottom:12px;">页面导航</div>
+          <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+            <a href="#solutions" style="color:var(--ink-soft);">行业场景</a>
+            <a href="#capabilities" style="color:var(--ink-soft);">能力体系</a>
+            <a href="#products" style="color:var(--ink-soft);">产品矩阵</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; font-family:var(--font-mono); margin-bottom:12px;">连接羚境</div>
+          <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+            <a href="#delivery" style="color:var(--ink-soft);">交付治理</a>
+            <a href="#about" style="color:var(--ink-soft);">关于羚境</a>
+            <a href="#contact" style="color:var(--ink-soft);">联系咨询</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:32px; flex-wrap:wrap; gap:16px;">
+      <div class="footer-text">&copy; 2026 湖北奥羚技术有限公司. All rights reserved.</div>
+      <div class="footer-text" style="display:flex; gap:24px;">
+        <span>contact@lingscape.ai</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

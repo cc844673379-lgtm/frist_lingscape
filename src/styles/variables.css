@@ -1,0 +1,30 @@
+:root {
+  --bg: #0E1012;
+  --bg-soft: #15171B;
+  --bg-panel: #111815;
+  --ink: #FFFFFF;
+  --ink-soft: #A0AABA;
+  --muted: #566171;
+  --line: #333943;
+  --accent: #35D0A9;
+  --accent-warm: #C8A760;
+  --light-band: #E8ECE7;
+
+  --motion-micro: 150ms;
+  --motion-small: 300ms;
+  --motion-medium: 800ms;
+  --ease-mapbox: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --max-width: 1280px;
+  --desktop-gutter: 24px;
+  --desktop-margin: 48px;
+  --tablet-margin: 32px;
+  --mobile-margin: 20px;
+  --prose-max-width: 680px;
+
+  --font-display: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+}

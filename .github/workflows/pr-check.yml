@@ -1,0 +1,73 @@
+﻿name: PR Review Comment Check
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # 每30分钟运行一次
+  pull_request_review:
+    types: [submitted, edited]
+  issue_comment:
+    types: [created, edited]
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  check-pr-comments:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pull-requests: read
+      issues: read
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Check PR comments
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open'
+            });
+            
+            console.log('Found open PRs:', pullRequests.length);
+            
+            for (const pr of pullRequests) {
+              console.log('\\nChecking PR #' + pr.number + ': ' + pr.title);
+              
+              const { data: reviews } = await github.rest.pulls.listReviews({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number
+              });
+              
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number
+              });
+              
+              console.log('  Reviews:', reviews.length);
+              console.log('  Comments:', comments.length);
+              
+              if (reviews.length > 0 || comments.length > 0) {
+                console.log('  \\n=== PR #' + pr.number + ' has activity ===');
+                
+                if (reviews.length > 0) {
+                  console.log('  \\nReview Comments:');
+                  reviews.forEach(review => {
+                    console.log('    - [' + review.state + '] ' + review.user.login + ': ' + (review.body || '(no body)'));
+                  });
+                }
+                
+                if (comments.length > 0) {
+                  console.log('  \\nIssue Comments:');
+                  comments.forEach(comment => {
+                    console.log('    - ' + comment.user.login + ': ' + comment.body.substring(0, 100));
+                  });
+                }
+              }
+            }
+            
+            console.log('\\nCheck complete!');
