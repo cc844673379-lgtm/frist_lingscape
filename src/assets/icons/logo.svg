@@ -1,12 +1,12 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
     <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E63946"/>
-      <stop offset="100%" stop-color="#F4A261"/>
+      <stop offset="0%" stop-color="#35D0A9"/>
+      <stop offset="100%" stop-color="#C8A760"/>
     </linearGradient>
     <linearGradient id="inkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1D3557"/>
-      <stop offset="100%" stop-color="#457B9D"/>
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#A0AABA"/>
     </linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
